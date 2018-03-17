@@ -1,0 +1,551 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02F7F63C205D54A80076245B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F7F63B205D54A80076245B /* AppDelegate.m */; };
+		02F7F63F205D54A80076245B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F7F63E205D54A80076245B /* ViewController.m */; };
+		02F7F642205D54A80076245B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F7F640205D54A80076245B /* Main.storyboard */; };
+		02F7F644205D54A80076245B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F7F643205D54A80076245B /* Assets.xcassets */; };
+		02F7F647205D54A80076245B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F7F645205D54A80076245B /* LaunchScreen.storyboard */; };
+		02F7F64A205D54A80076245B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F7F649205D54A80076245B /* main.m */; };
+		02F7F654205D54A90076245B /* WorkflowAppStoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F7F653205D54A90076245B /* WorkflowAppStoreTests.m */; };
+		02F7F65F205D54A90076245B /* WorkflowAppStoreUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F7F65E205D54A90076245B /* WorkflowAppStoreUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		02F7F650205D54A90076245B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02F7F62F205D54A80076245B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02F7F636205D54A80076245B;
+			remoteInfo = WorkflowAppStore;
+		};
+		02F7F65B205D54A90076245B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02F7F62F205D54A80076245B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02F7F636205D54A80076245B;
+			remoteInfo = WorkflowAppStore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02F7F637205D54A80076245B /* WorkflowAppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkflowAppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02F7F63A205D54A80076245B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		02F7F63B205D54A80076245B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		02F7F63D205D54A80076245B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		02F7F63E205D54A80076245B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		02F7F641205D54A80076245B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		02F7F643205D54A80076245B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		02F7F646205D54A80076245B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		02F7F648205D54A80076245B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02F7F649205D54A80076245B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		02F7F64F205D54A90076245B /* WorkflowAppStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkflowAppStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02F7F653205D54A90076245B /* WorkflowAppStoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkflowAppStoreTests.m; sourceTree = "<group>"; };
+		02F7F655205D54A90076245B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02F7F65A205D54A90076245B /* WorkflowAppStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkflowAppStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02F7F65E205D54A90076245B /* WorkflowAppStoreUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkflowAppStoreUITests.m; sourceTree = "<group>"; };
+		02F7F660205D54A90076245B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		02F7F634205D54A80076245B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02F7F64C205D54A90076245B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02F7F657205D54A90076245B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02F7F62E205D54A80076245B = {
+			isa = PBXGroup;
+			children = (
+				02F7F639205D54A80076245B /* WorkflowAppStore */,
+				02F7F652205D54A90076245B /* WorkflowAppStoreTests */,
+				02F7F65D205D54A90076245B /* WorkflowAppStoreUITests */,
+				02F7F638205D54A80076245B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		02F7F638205D54A80076245B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				02F7F637205D54A80076245B /* WorkflowAppStore.app */,
+				02F7F64F205D54A90076245B /* WorkflowAppStoreTests.xctest */,
+				02F7F65A205D54A90076245B /* WorkflowAppStoreUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		02F7F639205D54A80076245B /* WorkflowAppStore */ = {
+			isa = PBXGroup;
+			children = (
+				02F7F63A205D54A80076245B /* AppDelegate.h */,
+				02F7F63B205D54A80076245B /* AppDelegate.m */,
+				02F7F63D205D54A80076245B /* ViewController.h */,
+				02F7F63E205D54A80076245B /* ViewController.m */,
+				02F7F640205D54A80076245B /* Main.storyboard */,
+				02F7F643205D54A80076245B /* Assets.xcassets */,
+				02F7F645205D54A80076245B /* LaunchScreen.storyboard */,
+				02F7F648205D54A80076245B /* Info.plist */,
+				02F7F649205D54A80076245B /* main.m */,
+			);
+			path = WorkflowAppStore;
+			sourceTree = "<group>";
+		};
+		02F7F652205D54A90076245B /* WorkflowAppStoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				02F7F653205D54A90076245B /* WorkflowAppStoreTests.m */,
+				02F7F655205D54A90076245B /* Info.plist */,
+			);
+			path = WorkflowAppStoreTests;
+			sourceTree = "<group>";
+		};
+		02F7F65D205D54A90076245B /* WorkflowAppStoreUITests */ = {
+			isa = PBXGroup;
+			children = (
+				02F7F65E205D54A90076245B /* WorkflowAppStoreUITests.m */,
+				02F7F660205D54A90076245B /* Info.plist */,
+			);
+			path = WorkflowAppStoreUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		02F7F636205D54A80076245B /* WorkflowAppStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02F7F663205D54A90076245B /* Build configuration list for PBXNativeTarget "WorkflowAppStore" */;
+			buildPhases = (
+				02F7F633205D54A80076245B /* Sources */,
+				02F7F634205D54A80076245B /* Frameworks */,
+				02F7F635205D54A80076245B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WorkflowAppStore;
+			productName = WorkflowAppStore;
+			productReference = 02F7F637205D54A80076245B /* WorkflowAppStore.app */;
+			productType = "com.apple.product-type.application";
+		};
+		02F7F64E205D54A90076245B /* WorkflowAppStoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02F7F666205D54A90076245B /* Build configuration list for PBXNativeTarget "WorkflowAppStoreTests" */;
+			buildPhases = (
+				02F7F64B205D54A90076245B /* Sources */,
+				02F7F64C205D54A90076245B /* Frameworks */,
+				02F7F64D205D54A90076245B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02F7F651205D54A90076245B /* PBXTargetDependency */,
+			);
+			name = WorkflowAppStoreTests;
+			productName = WorkflowAppStoreTests;
+			productReference = 02F7F64F205D54A90076245B /* WorkflowAppStoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		02F7F659205D54A90076245B /* WorkflowAppStoreUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02F7F669205D54A90076245B /* Build configuration list for PBXNativeTarget "WorkflowAppStoreUITests" */;
+			buildPhases = (
+				02F7F656205D54A90076245B /* Sources */,
+				02F7F657205D54A90076245B /* Frameworks */,
+				02F7F658205D54A90076245B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02F7F65C205D54A90076245B /* PBXTargetDependency */,
+			);
+			name = WorkflowAppStoreUITests;
+			productName = WorkflowAppStoreUITests;
+			productReference = 02F7F65A205D54A90076245B /* WorkflowAppStoreUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		02F7F62F205D54A80076245B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = moxcomic;
+				TargetAttributes = {
+					02F7F636205D54A80076245B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					02F7F64E205D54A90076245B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 02F7F636205D54A80076245B;
+					};
+					02F7F659205D54A90076245B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 02F7F636205D54A80076245B;
+					};
+				};
+			};
+			buildConfigurationList = 02F7F632205D54A80076245B /* Build configuration list for PBXProject "WorkflowAppStore" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 02F7F62E205D54A80076245B;
+			productRefGroup = 02F7F638205D54A80076245B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				02F7F636205D54A80076245B /* WorkflowAppStore */,
+				02F7F64E205D54A90076245B /* WorkflowAppStoreTests */,
+				02F7F659205D54A90076245B /* WorkflowAppStoreUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		02F7F635205D54A80076245B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02F7F647205D54A80076245B /* LaunchScreen.storyboard in Resources */,
+				02F7F644205D54A80076245B /* Assets.xcassets in Resources */,
+				02F7F642205D54A80076245B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02F7F64D205D54A90076245B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02F7F658205D54A90076245B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02F7F633205D54A80076245B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02F7F63F205D54A80076245B /* ViewController.m in Sources */,
+				02F7F64A205D54A80076245B /* main.m in Sources */,
+				02F7F63C205D54A80076245B /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02F7F64B205D54A90076245B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02F7F654205D54A90076245B /* WorkflowAppStoreTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02F7F656205D54A90076245B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02F7F65F205D54A90076245B /* WorkflowAppStoreUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		02F7F651205D54A90076245B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02F7F636205D54A80076245B /* WorkflowAppStore */;
+			targetProxy = 02F7F650205D54A90076245B /* PBXContainerItemProxy */;
+		};
+		02F7F65C205D54A90076245B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02F7F636205D54A80076245B /* WorkflowAppStore */;
+			targetProxy = 02F7F65B205D54A90076245B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		02F7F640205D54A80076245B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02F7F641205D54A80076245B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		02F7F645205D54A80076245B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02F7F646205D54A80076245B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		02F7F661205D54A90076245B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		02F7F662205D54A90076245B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		02F7F664205D54A90076245B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WorkflowAppStore/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moxcomic.WorkflowAppStore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		02F7F665205D54A90076245B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WorkflowAppStore/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moxcomic.WorkflowAppStore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		02F7F667205D54A90076245B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WorkflowAppStoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moxcomic.WorkflowAppStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorkflowAppStore.app/WorkflowAppStore";
+			};
+			name = Debug;
+		};
+		02F7F668205D54A90076245B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WorkflowAppStoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moxcomic.WorkflowAppStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorkflowAppStore.app/WorkflowAppStore";
+			};
+			name = Release;
+		};
+		02F7F66A205D54A90076245B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WorkflowAppStoreUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moxcomic.WorkflowAppStoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WorkflowAppStore;
+			};
+			name = Debug;
+		};
+		02F7F66B205D54A90076245B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WorkflowAppStoreUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moxcomic.WorkflowAppStoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WorkflowAppStore;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02F7F632205D54A80076245B /* Build configuration list for PBXProject "WorkflowAppStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02F7F661205D54A90076245B /* Debug */,
+				02F7F662205D54A90076245B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02F7F663205D54A90076245B /* Build configuration list for PBXNativeTarget "WorkflowAppStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02F7F664205D54A90076245B /* Debug */,
+				02F7F665205D54A90076245B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02F7F666205D54A90076245B /* Build configuration list for PBXNativeTarget "WorkflowAppStoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02F7F667205D54A90076245B /* Debug */,
+				02F7F668205D54A90076245B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02F7F669205D54A90076245B /* Build configuration list for PBXNativeTarget "WorkflowAppStoreUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02F7F66A205D54A90076245B /* Debug */,
+				02F7F66B205D54A90076245B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 02F7F62F205D54A80076245B /* Project object */;
+}
