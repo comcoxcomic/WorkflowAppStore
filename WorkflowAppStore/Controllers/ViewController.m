@@ -64,7 +64,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.MainView.alpha = 1;
     [self getHTML];
     
     /*
