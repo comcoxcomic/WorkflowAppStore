@@ -10,7 +10,7 @@
 #import "AppView.h"
 #import "App.h"
 
-@interface ViewController ()
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 //用来存储应用数据
 @property (nonatomic,strong) NSArray *apps;
 @property (weak, nonatomic) IBOutlet UITableView *MainView;
@@ -19,6 +19,17 @@
 @end
 
 @implementation ViewController
+
+- (UIView *)aboutView {
+    if (_aboutView == nil) {
+        _aboutView= [AppView aboutView];
+        _aboutView.frame = self.MainView.frame;
+        _aboutView.alpha = 0;
+        [self.view addSubview:_aboutView];
+    }
+    return _aboutView;
+}
+
 
 //重写Get方法进行加载数据
 - (NSArray *)apps
@@ -53,6 +64,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.MainView.alpha = 1;
     [self getHTML];
     
     /*
@@ -60,9 +72,9 @@
      注意第11行
      */
     
-    self.MainView.dataSource = self;
-    self.MainView.delegate = self;
-    
+//    self.MainView.dataSource = self;
+//    self.MainView.delegate = self;
+//
     //[self loadApps];
 }
 
@@ -128,29 +140,21 @@
     NSInteger Index = Seg.selectedSegmentIndex;
     if (Index == 0)
     {
+//        self.aboutView.hidden = YES;
+//        self.MainView.hidden = NO;
         [UIView animateWithDuration:1 animations:^{
             self.aboutView.alpha = 0;
-        } completion:^(BOOL finished) {
-            if (finished)
-            {
-                [self.aboutView removeFromSuperview];
-                self.aboutView = nil;
-            }
+            self.MainView.alpha = 1;
         }];
     }
     else
     {
-        if (self.aboutView == nil)
-        {
-            AppView *aboutView = [AppView aboutView];
-            aboutView.frame = self.MainView.frame;
-            aboutView.alpha = 0;
-            self.aboutView = aboutView;
-            [self.view addSubview:aboutView];
-            [UIView animateWithDuration:1 animations:^{
-                aboutView.alpha = 1;
-            }];
-        }
+//        self.aboutView.hidden = NO;
+//        self.MainView.hidden = YES;
+        [UIView animateWithDuration:1 animations:^{
+            self.aboutView.alpha = 1;
+            self.MainView.alpha = 0;
+        }];
     }
 }
 @end
