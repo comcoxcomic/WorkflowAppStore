@@ -31,7 +31,7 @@
     _model = model;
     self.imageIcon.layer.cornerRadius = self.imageIcon.frame.size.width / 2;
     self.imageIcon.layer.masksToBounds = YES;
-    [self.imageIcon setBackgroundImageForState:UIControlStateNormal withURL:[NSURL URLWithString:model.picURL] placeholderImage:[UIImage imageNamed:@"timg"]];
+    [self.imageIcon setBackgroundImageForState:UIControlStateNormal withURL:[NSURL URLWithString:model.picURL] placeholderImage:[UIImage imageNamed:@"NoImage"]];
     self.lblName.text = [NSString stringWithFormat:@"%@",model.name];
     self.lblAuthor.text = [NSString stringWithFormat:@"%@",model.qq];
     self.lblVersion.text = [NSString stringWithFormat:@"%@",model.ver];
