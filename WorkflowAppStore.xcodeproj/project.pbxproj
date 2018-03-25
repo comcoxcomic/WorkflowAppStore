@@ -10,6 +10,7 @@
 		0270A39C20613E08008C68F2 /* AppView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0270A39B20613E08008C68F2 /* AppView.xib */; };
 		0270A3A2206144EF008C68F2 /* AppView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0270A3A1206144EF008C68F2 /* AppView.m */; };
 		0270A3A520614D40008C68F2 /* App.m in Sources */ = {isa = PBXBuildFile; fileRef = 0270A3A420614D40008C68F2 /* App.m */; };
+		029C7F492067DAB300C9AB74 /* Download.m in Sources */ = {isa = PBXBuildFile; fileRef = 029C7F482067DAB300C9AB74 /* Download.m */; };
 		02DD5C1D2067737F00E6933C /* AppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DD5C1B2067737F00E6933C /* AppCell.m */; };
 		02DD5C1E2067737F00E6933C /* AppCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02DD5C1C2067737F00E6933C /* AppCell.xib */; };
 		02DD5C22206780C400E6933C /* http.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DD5C21206780C400E6933C /* http.m */; };
@@ -47,6 +48,8 @@
 		0270A3A1206144EF008C68F2 /* AppView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppView.m; sourceTree = "<group>"; };
 		0270A3A320614D40008C68F2 /* App.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
 		0270A3A420614D40008C68F2 /* App.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = App.m; sourceTree = "<group>"; };
+		029C7F472067DAB300C9AB74 /* Download.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Download.h; sourceTree = "<group>"; };
+		029C7F482067DAB300C9AB74 /* Download.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Download.m; sourceTree = "<group>"; };
 		02DD5C1A2067737F00E6933C /* AppCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppCell.h; sourceTree = "<group>"; };
 		02DD5C1B2067737F00E6933C /* AppCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppCell.m; sourceTree = "<group>"; };
 		02DD5C1C2067737F00E6933C /* AppCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppCell.xib; sourceTree = "<group>"; };
@@ -129,6 +132,8 @@
 			children = (
 				0270A3A320614D40008C68F2 /* App.h */,
 				0270A3A420614D40008C68F2 /* App.m */,
+				029C7F472067DAB300C9AB74 /* Download.h */,
+				029C7F482067DAB300C9AB74 /* Download.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -365,12 +370,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WorkflowAppStore/Pods-WorkflowAppStore-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FFToast/FFToast.bundle",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SAMKeychain/Support/SAMKeychain.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FFToast.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SAMKeychain.bundle",
@@ -425,6 +432,7 @@
 				02F7F63F205D54A80076245B /* ViewController.m in Sources */,
 				02DD5C22206780C400E6933C /* http.m in Sources */,
 				02DD5C1D2067737F00E6933C /* AppCell.m in Sources */,
+				029C7F492067DAB300C9AB74 /* Download.m in Sources */,
 				02F7F64A205D54A80076245B /* main.m in Sources */,
 				02F7F63C205D54A80076245B /* AppDelegate.m in Sources */,
 			);

@@ -8,6 +8,9 @@ pod 'Masonry'
 pod 'MBProgressHUD'
 pod 'SocketRocket'
 pod 'SAMKeychain'
+pod 'SDWebImage'
+pod 'FFToast'
+pod 'LEETheme'
 pod 'IQKeyboardManager'
 
 end

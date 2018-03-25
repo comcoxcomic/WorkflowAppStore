@@ -9,26 +9,24 @@
 #import "AppView.h"
 #import "App.h"
 @interface AppView()
-@property (weak, nonatomic) IBOutlet UIButton *imageIcon;
-@property (weak, nonatomic) IBOutlet UILabel *lblName;
-@property (weak, nonatomic) IBOutlet UILabel *lblAuthor;
-@property (weak, nonatomic) IBOutlet UILabel *lblDownload;
-@property (weak, nonatomic) IBOutlet UILabel *lblVersion;
+- (IBAction)btnJoinGroup:(id)sender;
+- (IBAction)btnEmail:(id)sender;
+
 @end
 
 @implementation AppView
-
-+ (instancetype)appView
-{
-    NSBundle *rootBundle = [NSBundle mainBundle];
-    
-    return [[rootBundle loadNibNamed:@"AppView" owner:nil options:nil] lastObject];
-}
 
 + (instancetype)aboutView
 {
     NSBundle *rootBundle = [NSBundle mainBundle];
     
-    return [rootBundle loadNibNamed:@"AppView" owner:nil options:nil][1];
+    return [[rootBundle loadNibNamed:@"AppView" owner:nil options:nil] firstObject];
+}
+- (IBAction)btnJoinGroup:(id)sender {
+    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"https://jq.qq.com/?_wv=1027&k=551cmsq"]];
+}
+
+- (IBAction)btnEmail:(id)sender {
+    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"mailto:moxcomic@gmail.com"]];
 }
 @end

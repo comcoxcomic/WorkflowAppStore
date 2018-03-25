@@ -11,6 +11,5 @@
 @interface AppView : UITableViewCell
 @property (nonatomic,strong) App *model;
 
-+ (instancetype) appView;
 + (instancetype) aboutView;
 @end

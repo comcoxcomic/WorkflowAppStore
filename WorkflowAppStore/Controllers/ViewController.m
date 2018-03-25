@@ -31,24 +31,6 @@
     return _aboutView;
 }
 
-
-//重写Get方法进行加载数据
-//- (NSArray *)apps
-//{
-//    if (_apps == nil)
-//    {
-//        NSArray *arr = [self getHTML];
-//        NSMutableArray *arrModels = [NSMutableArray array];
-//        for (NSDictionary *dict in arr)
-//        {
-//            //App *model = [App appWithDictionary:dict];
-//            //[arrModels addObject:model];
-//        }
-//        _apps = arrModels;
-//    }
-//    return  _apps;
-//}
-
 - (void)abc {
     [http requesetWithUrl:@"http://www.moxcomic.com:23333/Store/getApp" params:nil sucess:^(id responseObject) {
         App *app = [App yy_modelWithJSON:responseObject];
@@ -59,34 +41,10 @@
     }];
 }
 
-//-(NSArray *)getHTML
-//{
-//    //1.确定请求路径
-//    NSURL *url = [NSURL URLWithString:@"http://www.moxcomic.com:2333/Store/GetAll"];
-//    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
-//    [request setHTTPMethod:@"GET"];
-//    //第三步，连接服务器
-//    NSData *received = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
-//    NSString *str = [[NSString alloc]initWithData:received encoding:NSUTF8StringEncoding];
-//    return [self dictionaryWithJsonString:str][@"All"];
-//}
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self abc];
     [self.MainView registerNib:[UINib nibWithNibName:@"AppCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"1111"];
-//    [self getHTML];
-    
-    /*
-     self 要遵循 UITableViewDelegate和UITableViewDelegate两个代理
-     注意第11行
-     */
-    
-//    self.MainView.dataSource = self;
-//    self.MainView.delegate = self;
-//
-    //[self loadApps];
 }
 
 
@@ -109,23 +67,6 @@
     AppCell *cell = (AppCell *)[tableView dequeueReusableCellWithIdentifier:@"1111"];
     //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath]; //根据indexPath准确地取出一行，而不是从cell重用队列中取出
     cell.model = self.apps[indexPath.row];
-//    if (cell == nil) {
-//        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"identifier"];
-//        //cell.frame = CGRectMake(0, 0, tableView.frame.size.width, tableView.frame.size.height);
-//        //这里注意啊 涉及到表格重用的问题 如果写在这里数字顺序会出现混乱 之所以会这样是因为单元格被重用了
-//        //cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
-//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//
-//        App *appModel = self.apps[indexPath.row];
-//
-//        AppView *appView = [AppView appView];
-//
-//        appView.model = appModel;
-//
-//        [cell addSubview:appView];
-//    }
-    
-    //cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
     
     return cell;
 }
@@ -134,22 +75,6 @@
     [UIView animateWithDuration:1 animations:^{
         cell.alpha = 1;
     }];
-}
-
-- (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString {
-    if (jsonString == nil) {
-        return nil;
-    }
-    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
-    NSError *err;
-    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData
-                                                        options:NSJSONReadingMutableContainers
-                                                          error:&err];
-    if(err) {
-        NSLog(@"json解析失败：%@",err);
-        return nil;
-    }
-    return dic;
 }
 
 - (IBAction)TabSelect:(id)sender {

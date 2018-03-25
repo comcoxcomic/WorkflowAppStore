@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="izr-ve-Tgm">
+        <view contentMode="scaleToFill" id="izr-ve-Tgm" customClass="AppView">
             <rect key="frame" x="0.0" y="0.0" width="414" height="676"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -42,11 +42,17 @@
                     <rect key="frame" x="20" y="602" width="196" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="加入官方QQ群：685447457"/>
+                    <connections>
+                        <action selector="btnJoinGroup:" destination="izr-ve-Tgm" eventType="touchUpInside" id="luO-S1-POg"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhu-Td-5zj">
                     <rect key="frame" x="332" y="602" width="62" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="联系我们"/>
+                    <connections>
+                        <action selector="btnEmail:" destination="izr-ve-Tgm" eventType="touchUpInside" id="OPm-tt-AqP"/>
+                    </connections>
                 </button>
                 <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReD-Bs-kzZ">
                     <rect key="frame" x="0.0" y="30" width="414" height="30"/>
