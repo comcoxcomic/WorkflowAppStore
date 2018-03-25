@@ -10,6 +10,9 @@
 		0270A39C20613E08008C68F2 /* AppView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0270A39B20613E08008C68F2 /* AppView.xib */; };
 		0270A3A2206144EF008C68F2 /* AppView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0270A3A1206144EF008C68F2 /* AppView.m */; };
 		0270A3A520614D40008C68F2 /* App.m in Sources */ = {isa = PBXBuildFile; fileRef = 0270A3A420614D40008C68F2 /* App.m */; };
+		02DD5C1D2067737F00E6933C /* AppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DD5C1B2067737F00E6933C /* AppCell.m */; };
+		02DD5C1E2067737F00E6933C /* AppCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02DD5C1C2067737F00E6933C /* AppCell.xib */; };
+		02DD5C22206780C400E6933C /* http.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DD5C21206780C400E6933C /* http.m */; };
 		02F7F63C205D54A80076245B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F7F63B205D54A80076245B /* AppDelegate.m */; };
 		02F7F63F205D54A80076245B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F7F63E205D54A80076245B /* ViewController.m */; };
 		02F7F642205D54A80076245B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02F7F640205D54A80076245B /* Main.storyboard */; };
@@ -44,6 +47,12 @@
 		0270A3A1206144EF008C68F2 /* AppView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppView.m; sourceTree = "<group>"; };
 		0270A3A320614D40008C68F2 /* App.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
 		0270A3A420614D40008C68F2 /* App.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = App.m; sourceTree = "<group>"; };
+		02DD5C1A2067737F00E6933C /* AppCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppCell.h; sourceTree = "<group>"; };
+		02DD5C1B2067737F00E6933C /* AppCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppCell.m; sourceTree = "<group>"; };
+		02DD5C1C2067737F00E6933C /* AppCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppCell.xib; sourceTree = "<group>"; };
+		02DD5C20206780C400E6933C /* http.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = http.h; sourceTree = "<group>"; };
+		02DD5C21206780C400E6933C /* http.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = http.m; sourceTree = "<group>"; };
+		02DD5C23206785C800E6933C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		02F7F637205D54A80076245B /* Workflow商城.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Workflow商城.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02F7F63A205D54A80076245B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		02F7F63B205D54A80076245B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -108,6 +117,9 @@
 				0270A39B20613E08008C68F2 /* AppView.xib */,
 				0270A3A0206144EF008C68F2 /* AppView.h */,
 				0270A3A1206144EF008C68F2 /* AppView.m */,
+				02DD5C1A2067737F00E6933C /* AppCell.h */,
+				02DD5C1B2067737F00E6933C /* AppCell.m */,
+				02DD5C1C2067737F00E6933C /* AppCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -128,6 +140,15 @@
 				02F7F63B205D54A80076245B /* AppDelegate.m */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		02DD5C1F206780A500E6933C /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				02DD5C20206780C400E6933C /* http.h */,
+				02DD5C21206780C400E6933C /* http.m */,
+			);
+			path = HTTP;
 			sourceTree = "<group>";
 		};
 		02F7F62E205D54A80076245B = {
@@ -155,6 +176,7 @@
 		02F7F639205D54A80076245B /* WorkflowAppStore */ = {
 			isa = PBXGroup;
 			children = (
+				02DD5C1F206780A500E6933C /* HTTP */,
 				0270A3A62061575E008C68F2 /* Controllers */,
 				0270A3A72061578F008C68F2 /* Views */,
 				0270A3A8206157BB008C68F2 /* Models */,
@@ -162,6 +184,7 @@
 				02F7F643205D54A80076245B /* Assets.xcassets */,
 				02F7F648205D54A80076245B /* Info.plist */,
 				02F7F649205D54A80076245B /* main.m */,
+				02DD5C23206785C800E6933C /* PrefixHeader.pch */,
 			);
 			path = WorkflowAppStore;
 			sourceTree = "<group>";
@@ -313,6 +336,7 @@
 				0270A39C20613E08008C68F2 /* AppView.xib in Resources */,
 				02F7F647205D54A80076245B /* LaunchScreen.storyboard in Resources */,
 				02F7F644205D54A80076245B /* Assets.xcassets in Resources */,
+				02DD5C1E2067737F00E6933C /* AppCell.xib in Resources */,
 				02F7F642205D54A80076245B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +423,8 @@
 				0270A3A520614D40008C68F2 /* App.m in Sources */,
 				0270A3A2206144EF008C68F2 /* AppView.m in Sources */,
 				02F7F63F205D54A80076245B /* ViewController.m in Sources */,
+				02DD5C22206780C400E6933C /* http.m in Sources */,
+				02DD5C1D2067737F00E6933C /* AppCell.m in Sources */,
 				02F7F64A205D54A80076245B /* main.m in Sources */,
 				02F7F63C205D54A80076245B /* AppDelegate.m in Sources */,
 			);
@@ -566,6 +592,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CU8H9UQL9A;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WorkflowAppStore/PrefixHeader.pch";
 				INFOPLIST_FILE = WorkflowAppStore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -582,6 +609,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CU8H9UQL9A;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WorkflowAppStore/PrefixHeader.pch";
 				INFOPLIST_FILE = WorkflowAppStore/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

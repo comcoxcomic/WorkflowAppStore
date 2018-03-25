@@ -8,22 +8,24 @@
 
 #import <Foundation/Foundation.h>
 
-@interface App : NSObject
-@property (nonatomic,assign) int Id;
-@property (nonatomic,copy) NSString *Name;
-@property (nonatomic,assign) BOOL New;
-@property (nonatomic,copy) NSString *Free;
-@property (nonatomic,copy) NSString *pInformation;
-@property (nonatomic,copy) NSString *Description;
-@property (nonatomic,copy) NSString *Author;
-@property (nonatomic,copy) NSString *Version;
-@property (nonatomic,copy) NSString *FirstReleaseTime;
-@property (nonatomic,copy) NSString *UpdateDescription;
-@property (nonatomic,copy) NSString *LastUpdateTime;
-@property (nonatomic,copy) NSString *Pic;
-@property (nonatomic,assign) int Download;
-@property (nonatomic,copy) NSString *Note;
+@interface Apps :NSObject
+@property (nonatomic , copy) NSString              * qq;
+@property (nonatomic , copy) NSString              * picURL;
+@property (nonatomic , assign) NSInteger             rowId;
+@property (nonatomic , copy) NSString              * updateTime;
+@property (nonatomic , copy) NSString              * price;
+@property (nonatomic , copy) NSString              * ver;
+@property (nonatomic , assign) NSInteger              downloadCount;
+@property (nonatomic , copy) NSString              * firstTime;
+@property (nonatomic , copy) NSString              * des;
+@property (nonatomic , copy) NSString              * free;
+@property (nonatomic , copy) NSString              * name;
 
--(App *) initWithDictionary:(NSDictionary *)dict;
-+(App *) appWithDictionary:(NSDictionary *)dict;
 @end
+
+@interface App :NSObject
+@property (nonatomic , strong) NSArray<Apps *>              * apps;
+@property (nonatomic , assign) NSInteger              code;
+
+@end
+

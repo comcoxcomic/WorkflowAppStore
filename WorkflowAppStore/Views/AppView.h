@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class App;
-@interface AppView : UIView
+@interface AppView : UITableViewCell
 @property (nonatomic,strong) App *model;
 
 + (instancetype) appView;
