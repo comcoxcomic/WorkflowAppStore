@@ -1,5 +1,5 @@
 platform :ios,'9.0'
-target ‘WorkflowAppStore’ do
+target ‘RuleCollection’ do
 pod 'AFNetworking'
 pod 'YYModel'
 pod 'MJRefresh'
