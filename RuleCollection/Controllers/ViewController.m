@@ -7,25 +7,24 @@
 //
 
 #import "ViewController.h"
-#import "AppView.h"
 #import "App.h"
 #import "AppFrame.h"
 #import "AppTableViewCell.h"
+#import "AboutView.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 //用来存储应用数据
 @property (nonatomic,strong) NSArray *apps;
 @property (weak, nonatomic) IBOutlet UITableView *MainView;
 - (IBAction)TabSelect:(id)sender;
-@property (weak,nonatomic) UIView *aboutView;
+@property (nonatomic, strong) UIView *aboutView;
 @end
 
 @implementation ViewController
 
 - (UIView *)aboutView {
     if (_aboutView == nil) {
-        _aboutView= [AppView aboutView];
-        _aboutView.frame = self.MainView.frame;
+        _aboutView = [[AboutView alloc] initWithFrame:self.MainView.frame];
         _aboutView.alpha = 0;
         [self.view addSubview:_aboutView];
     }

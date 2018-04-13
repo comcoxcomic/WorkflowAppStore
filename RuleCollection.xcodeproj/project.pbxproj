@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0211D101207DFE2700E70EB9 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 0211D100207DFE2700E70EB9 /* Util.m */; };
-		0270A39C20613E08008C68F2 /* AppView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0270A39B20613E08008C68F2 /* AppView.xib */; };
-		0270A3A2206144EF008C68F2 /* AppView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0270A3A1206144EF008C68F2 /* AppView.m */; };
 		0270A3A520614D40008C68F2 /* App.m in Sources */ = {isa = PBXBuildFile; fileRef = 0270A3A420614D40008C68F2 /* App.m */; };
+		0290D4B52080890A0013D724 /* AboutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290D4B42080890A0013D724 /* AboutView.m */; };
 		029C7F492067DAB300C9AB74 /* Download.m in Sources */ = {isa = PBXBuildFile; fileRef = 029C7F482067DAB300C9AB74 /* Download.m */; };
 		02B2233620803879006CA8D1 /* AppTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B2233520803879006CA8D1 /* AppTableViewCell.m */; };
 		02B2233A20804A71006CA8D1 /* AppFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B2233920804A71006CA8D1 /* AppFrame.m */; };
@@ -46,11 +45,10 @@
 /* Begin PBXFileReference section */
 		0211D0FF207DFE2700E70EB9 /* Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 		0211D100207DFE2700E70EB9 /* Util.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
-		0270A39B20613E08008C68F2 /* AppView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppView.xib; sourceTree = "<group>"; };
-		0270A3A0206144EF008C68F2 /* AppView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppView.h; sourceTree = "<group>"; };
-		0270A3A1206144EF008C68F2 /* AppView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppView.m; sourceTree = "<group>"; };
 		0270A3A320614D40008C68F2 /* App.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
 		0270A3A420614D40008C68F2 /* App.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = App.m; sourceTree = "<group>"; };
+		0290D4B32080890A0013D724 /* AboutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutView.h; sourceTree = "<group>"; };
+		0290D4B42080890A0013D724 /* AboutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutView.m; sourceTree = "<group>"; };
 		029C7F472067DAB300C9AB74 /* Download.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Download.h; sourceTree = "<group>"; };
 		029C7F482067DAB300C9AB74 /* Download.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Download.m; sourceTree = "<group>"; };
 		02B2233420803879006CA8D1 /* AppTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppTableViewCell.h; sourceTree = "<group>"; };
@@ -130,11 +128,10 @@
 			children = (
 				02F7F645205D54A80076245B /* LaunchScreen.storyboard */,
 				02F7F640205D54A80076245B /* Main.storyboard */,
-				0270A39B20613E08008C68F2 /* AppView.xib */,
-				0270A3A0206144EF008C68F2 /* AppView.h */,
-				0270A3A1206144EF008C68F2 /* AppView.m */,
 				02B2233420803879006CA8D1 /* AppTableViewCell.h */,
 				02B2233520803879006CA8D1 /* AppTableViewCell.m */,
+				0290D4B32080890A0013D724 /* AboutView.h */,
+				0290D4B42080890A0013D724 /* AboutView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -353,7 +350,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0270A39C20613E08008C68F2 /* AppView.xib in Resources */,
 				02F7F647205D54A80076245B /* LaunchScreen.storyboard in Resources */,
 				02F7F644205D54A80076245B /* Assets.xcassets in Resources */,
 				02F7F642205D54A80076245B /* Main.storyboard in Resources */,
@@ -442,7 +438,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0270A3A520614D40008C68F2 /* App.m in Sources */,
-				0270A3A2206144EF008C68F2 /* AppView.m in Sources */,
 				02F7F63F205D54A80076245B /* ViewController.m in Sources */,
 				02DD5C22206780C400E6933C /* Http.m in Sources */,
 				029C7F492067DAB300C9AB74 /* Download.m in Sources */,
@@ -450,6 +445,7 @@
 				02F7F64A205D54A80076245B /* main.m in Sources */,
 				02F7F63C205D54A80076245B /* AppDelegate.m in Sources */,
 				0211D101207DFE2700E70EB9 /* Util.m in Sources */,
+				0290D4B52080890A0013D724 /* AboutView.m in Sources */,
 				02B2233620803879006CA8D1 /* AppTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

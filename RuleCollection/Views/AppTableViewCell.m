@@ -37,7 +37,7 @@
     
     
     //根据不同的需求 导入不同的AFNetworking的控件头文件例如<UIButton+AFNetworking.h>、<UIImageView+AFNetworking.h>
-    [self.imageViewIcon setImageWithURL:[NSURL URLWithString:model.picURL] placeholderImage:nil];
+    [self.imageViewIcon setImageWithURL:[NSURL URLWithString:model.picURL] placeholderImage:[UIImage imageNamed:@"NoImage"]];
 //    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.picURL]]];
 //    self.imageViewIcon.image = image;
     
@@ -67,11 +67,6 @@
     self.btnAddRule.frame = self.appFrame.btnAddRuleFrame;
 }
 
-- (CGSize) sizeWithText:(NSString *)text maxSize:(CGSize)maxSize font:(UIFont *)font {
-    NSDictionary *attr = @{ NSFontAttributeName : font };
-    return [text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:attr context:nil].size;
-}
-
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         UIImageView *imageViewIcon = [[UIImageView alloc] init];
@@ -80,21 +75,25 @@
         
         UILabel *lblAppName = [[UILabel alloc] init];
         lblAppName.font = textFont;
+        lblAppName.numberOfLines = 0;
         [self.contentView addSubview:lblAppName];
         self.lblAppName = lblAppName;
         
         UILabel *lblAuthorQQ = [[UILabel alloc] init];
         lblAuthorQQ.font = textFont;
+        lblAuthorQQ.numberOfLines = 0;
         [self.contentView addSubview:lblAuthorQQ];
         self.lblAuthorQQ = lblAuthorQQ;
         
         UILabel *lblAppVersion = [[UILabel alloc] init];
         lblAppVersion.font = textFont;
+        lblAppVersion.numberOfLines = 0;
         [self.contentView addSubview:lblAppVersion];
         self.lblAppVersion = lblAppVersion;
         
         UILabel *lblAppDescription = [[UILabel alloc] init];
         lblAppDescription.font = textFont;
+        lblAppDescription.numberOfLines = 0;
         [self.contentView addSubview:lblAppDescription];
         self.lblAppDescription = lblAppDescription;
         

@@ -13,5 +13,6 @@
 
 + (UIViewController *)getViewControllerWithView:(UIView *)view;
 + (NSString *)urlEncodeStr:(NSString *)input;
++ (CGSize)sizeWithText:(NSString *)text maxSize:(CGSize)maxSize font:(UIFont *)font;
 
 @end

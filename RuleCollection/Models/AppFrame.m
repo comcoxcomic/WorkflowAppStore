@@ -25,22 +25,22 @@
     CGFloat iconX = (mainBound.size.width - iconW) / 2;
     _appIconFrame = CGRectMake(iconX, iconY, iconW, iconH);
     
-    CGSize appNameSize = [self sizeWithText:self.app.name maxSize:CGSizeMake(MAXFLOAT, MAXFLOAT) font:textFont];
+    CGSize appNameSize = [Util sizeWithText:self.app.name maxSize:CGSizeMake(mainBound.size.width - margin * 2, MAXFLOAT) font:textFont];
     CGFloat appNameX = (mainBound.size.width - appNameSize.width) / 2;
     CGFloat appNameY = CGRectGetMaxY(_appIconFrame) + margin;
     _appNameFrame = CGRectMake(appNameX, appNameY, appNameSize.width, appNameSize.height);
     
-    CGSize authorQQSize = [self sizeWithText:self.app.qq maxSize:CGSizeMake(MAXFLOAT, MAXFLOAT) font:textFont];
+    CGSize authorQQSize = [Util sizeWithText:self.app.qq maxSize:CGSizeMake(mainBound.size.width - margin * 2, MAXFLOAT) font:textFont];
     CGFloat authorQQX = (mainBound.size.width - authorQQSize.width) / 2;
     CGFloat authorQQY = CGRectGetMaxY(_appNameFrame) + margin;
     _authorQQFrame = CGRectMake(authorQQX, authorQQY, authorQQSize.width, authorQQSize.height);
     
-    CGSize appVersionSize = [self sizeWithText:self.app.ver maxSize:CGSizeMake(MAXFLOAT, MAXFLOAT) font:textFont];
+    CGSize appVersionSize = [Util sizeWithText:self.app.ver maxSize:CGSizeMake(mainBound.size.width - margin * 2, MAXFLOAT) font:textFont];
     CGFloat appVersionX = (mainBound.size.width - appVersionSize.width) / 2;
     CGFloat appVersionY = CGRectGetMaxY(_authorQQFrame) + margin;
     _appVersionFrame = CGRectMake(appVersionX, appVersionY, appVersionSize.width, appVersionSize.height);
     
-    CGSize appDescriptionSize = [self sizeWithText:self.app.des maxSize:CGSizeMake(MAXFLOAT, MAXFLOAT) font:textFont];
+    CGSize appDescriptionSize = [Util sizeWithText:self.app.des maxSize:CGSizeMake(mainBound.size.width - margin * 2, MAXFLOAT) font:textFont];
     CGFloat appDescriptionX = (mainBound.size.width - appDescriptionSize.width) / 2;
     CGFloat appDescriptionY = CGRectGetMaxY(_appVersionFrame) + margin;
     _appDescriptionFrame = CGRectMake(appDescriptionX, appDescriptionY, appDescriptionSize.width, appDescriptionSize.height);
@@ -60,8 +60,4 @@
     _rowHeight = CGRectGetMaxY(_btnAddRuleFrame) + margin;
 }
 
-- (CGSize) sizeWithText:(NSString *)text maxSize:(CGSize)maxSize font:(UIFont *)font {
-    NSDictionary *attr = @{ NSFontAttributeName : font };
-    return [text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:attr context:nil].size;
-}
 @end
