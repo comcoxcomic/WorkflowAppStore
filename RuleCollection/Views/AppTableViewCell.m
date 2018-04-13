@@ -120,6 +120,7 @@
         [btnAddRule addTarget:self action:@selector(addRule) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:btnAddRule];
         self.btnAddRule = btnAddRule;
+        
     }
     return self;
 }
