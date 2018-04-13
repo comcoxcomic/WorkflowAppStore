@@ -18,7 +18,7 @@
         CGRect mainBound = [[UIScreen mainScreen] bounds];
         
         UIImageView *imageIcon = [[UIImageView alloc] init];
-        [imageIcon setImage:[UIImage imageNamed:@"NoImage"]];
+        [imageIcon setImage:[UIImage imageNamed:@"AboutIcon"]];
         CGFloat iconW = 170;
         CGFloat iconH = 170;
         CGFloat iconX = (mainBound.size.width - iconW) / 2;
@@ -30,7 +30,7 @@
         lblAppName.text = @"规则仓库";
         lblAppName.font = textFont;
         lblAppName.numberOfLines = 0;
-        CGSize appNameSize = [Util sizeWithText:lblAppName.text maxSize:CGSizeMake(MAXFLOAT, MAXFLOAT) font:textFont];
+        CGSize appNameSize = [Util sizeWithText:lblAppName.text maxSize:CGSizeMake(mainBound.size.width - margin * 2, MAXFLOAT) font:textFont];
         CGFloat appNameX = (mainBound.size.width - appNameSize.width) / 2;
         CGFloat appNameY = CGRectGetMaxY(imageIcon.frame) + margin;
         lblAppName.frame = CGRectMake(appNameX, appNameY, appNameSize.width, appNameSize.height);
@@ -40,7 +40,7 @@
         lblAppVersion.text = @"版本：公测版本";
         lblAppVersion.font = textFont;
         lblAppVersion.numberOfLines = 0;
-        CGSize appVersionSize = [Util sizeWithText:lblAppVersion.text maxSize:CGSizeMake(MAXFLOAT, MAXFLOAT) font:textFont];
+        CGSize appVersionSize = [Util sizeWithText:lblAppVersion.text maxSize:CGSizeMake(mainBound.size.width - margin * 2, MAXFLOAT) font:textFont];
         CGFloat appVersionX = (mainBound.size.width - appVersionSize.width) / 2;
         CGFloat appVersionY = CGRectGetMaxY(lblAppName.frame) + margin;
         lblAppVersion.frame = CGRectMake(appVersionX, appVersionY, appVersionSize.width, appVersionSize.height);
@@ -50,7 +50,7 @@
         lblAppAuthor.text = @"开发者：神崎·H·亚里亚";
         lblAppAuthor.font = textFont;
         lblAppAuthor.numberOfLines = 0;
-        CGSize appAuthorSize = [Util sizeWithText:lblAppAuthor.text maxSize:CGSizeMake(MAXFLOAT, MAXFLOAT) font:textFont];
+        CGSize appAuthorSize = [Util sizeWithText:lblAppAuthor.text maxSize:CGSizeMake(mainBound.size.width - margin * 2, MAXFLOAT) font:textFont];
         CGFloat appAuthorX = (mainBound.size.width - appAuthorSize.width) / 2;
         CGFloat appAuthorY = CGRectGetMaxY(lblAppVersion.frame) + margin;
         lblAppAuthor.frame = CGRectMake(appAuthorX, appAuthorY, appAuthorSize.width, appAuthorSize.height);
@@ -60,7 +60,7 @@
         lblAppAbout.text = @"如何上传规则？\n1.加入官方群\n2.申请作者权限\n3.审核后开通权限";
         lblAppAbout.font = textFont;
         lblAppAbout.numberOfLines = 0;
-        CGSize appAboutSize = [Util sizeWithText:lblAppAbout.text maxSize:CGSizeMake(MAXFLOAT, MAXFLOAT) font:textFont];
+        CGSize appAboutSize = [Util sizeWithText:lblAppAbout.text maxSize:CGSizeMake(mainBound.size.width - margin * 2, MAXFLOAT) font:textFont];
         CGFloat appAboutX = (mainBound.size.width - appAboutSize.width) / 2;
         CGFloat appAboutY = CGRectGetMaxY(lblAppAuthor.frame) + margin;
         lblAppAbout.frame = CGRectMake(appAboutX, appAboutY, appAboutSize.width, appAboutSize.height);
