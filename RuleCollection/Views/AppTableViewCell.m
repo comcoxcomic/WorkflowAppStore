@@ -10,6 +10,7 @@
 #import "App.h"
 #import "AppFrame.h"
 #import "Download.h"
+#import <UIImageView+AFNetworking.h>
 
 #define textFont [UIFont systemFontOfSize:12]
 
@@ -34,8 +35,11 @@
 - (void)settingData {
     Apps *model = self.appFrame.app;
     
-    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.picURL]]];
-    self.imageViewIcon.image = image;
+    
+    //根据不同的需求 导入不同的AFNetworking的<UIButton+AFNetworking.h>
+    [self.imageViewIcon setImageWithURL:[NSURL URLWithString:model.picURL] placeholderImage:nil];
+//    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.picURL]]];
+//    self.imageViewIcon.image = image;
     
     self.lblAppName.text = model.name;
     
