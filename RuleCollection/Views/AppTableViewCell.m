@@ -36,7 +36,7 @@
     Apps *model = self.appFrame.app;
     
     
-    //根据不同的需求 导入不同的AFNetworking的<UIButton+AFNetworking.h>
+    //根据不同的需求 导入不同的AFNetworking的控件头文件例如<UIButton+AFNetworking.h>、<UIImageView+AFNetworking.h>
     [self.imageViewIcon setImageWithURL:[NSURL URLWithString:model.picURL] placeholderImage:nil];
 //    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.picURL]]];
 //    self.imageViewIcon.image = image;
