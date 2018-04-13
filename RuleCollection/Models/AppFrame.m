@@ -48,7 +48,7 @@
     CGFloat btnShowInformationX = 0;
     CGFloat btnShowInformationY = CGRectGetMaxY(_appDescriptionFrame) + margin;
     CGFloat btnShowInformationW = mainBound.size.width / 2;
-    CGFloat btnShowInformationH = 20;
+    CGFloat btnShowInformationH = 30;
     _btnShowInformationFrame = CGRectMake(btnShowInformationX, btnShowInformationY, btnShowInformationW, btnShowInformationH);
     
     CGFloat btnAddRuleX = CGRectGetMaxX(_btnShowInformationFrame);

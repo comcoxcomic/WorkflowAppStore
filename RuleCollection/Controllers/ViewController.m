@@ -77,6 +77,7 @@
         cell = [[AppTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"1111"];
     }
     //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath]; //根据indexPath准确地取出一行，而不是从cell重用队列中取出
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.appFrame = self.apps[indexPath.row];
     
     return cell;

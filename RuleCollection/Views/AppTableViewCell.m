@@ -97,6 +97,11 @@
         UIButton *btnInformation = [[UIButton alloc] init];
         [btnInformation setTitle:@"详细信息" forState:UIControlStateNormal];
         [btnInformation setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        [btnInformation setTitleColor: [UIColor grayColor] forState:UIControlStateHighlighted];
+        [btnInformation.layer setBorderWidth:1.0];
+        [btnInformation.layer setCornerRadius:10.0];
+        [btnInformation.layer setMasksToBounds:YES];
+        btnInformation.layer.borderColor = [UIColor blueColor].CGColor;
         [btnInformation addTarget:self action:@selector(showInformation) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:btnInformation];
         self.btnInformation = btnInformation;
@@ -104,6 +109,11 @@
         UIButton *btnAddRule = [[UIButton alloc] init];
         [btnAddRule setTitle:@"添加规则" forState:UIControlStateNormal];
         [btnAddRule setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        [btnAddRule setTitleColor: [UIColor grayColor] forState:UIControlStateHighlighted];
+        [btnAddRule.layer setBorderWidth:1.0];
+        [btnAddRule.layer setCornerRadius:10.0];
+        [btnAddRule.layer setMasksToBounds:YES];
+        btnAddRule.layer.borderColor = [UIColor blueColor].CGColor;
         [btnAddRule addTarget:self action:@selector(addRule) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:btnAddRule];
         self.btnAddRule = btnAddRule;
