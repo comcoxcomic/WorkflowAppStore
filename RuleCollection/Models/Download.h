@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface Download :NSObject
-@property (nonatomic , copy) NSString              * downloadURL;
+@property (nonatomic , copy) NSString              * AppUrl;
 @property (nonatomic , assign) NSInteger              code;
 
 @end

@@ -9,17 +9,16 @@
 #import <Foundation/Foundation.h>
 
 @interface Apps :NSObject
-@property (nonatomic , copy) NSString              * qq;
-@property (nonatomic , copy) NSString              * picURL;
+@property (nonatomic , copy) NSString              * AuthorQQ;
+@property (nonatomic , copy) NSString              * AppPicUrl;
 @property (nonatomic , assign) NSInteger             rowId;
-@property (nonatomic , copy) NSString              * updateTime;
-@property (nonatomic , copy) NSString              * price;
-@property (nonatomic , copy) NSString              * ver;
-@property (nonatomic , assign) NSInteger             downloadCount;
-@property (nonatomic , copy) NSString              * firstTime;
-@property (nonatomic , copy) NSString              * des;
-@property (nonatomic , copy) NSString              * free;
-@property (nonatomic , copy) NSString              * name;
+@property (nonatomic , copy) NSString              * AppUpdateTime;
+@property (nonatomic , copy) NSString              * AppVersion;
+@property (nonatomic , assign) NSInteger             Download;
+@property (nonatomic , copy) NSString              * AppUploadTime;
+@property (nonatomic , copy) NSString              * AppDescription;
+@property (nonatomic , copy) NSString              * AppName;
+@property (nonatomic , copy) NSString              * AuthorName;
 
 @end
 

@@ -10,7 +10,6 @@
 #import "App.h"
 #import "AppFrame.h"
 #import "AppTableViewCell.h"
-#import "AboutView.h"
 #import <MJRefresh.h>
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -18,22 +17,12 @@
 @property (nonatomic,strong) NSArray *apps;
 @property (weak, nonatomic) IBOutlet UITableView *MainView;
 - (IBAction)TabSelect:(id)sender;
-@property (nonatomic, strong) UIView *aboutView;
 
 @property (nonatomic, strong)MJRefreshNormalHeader *mjHeader;
 @property (nonatomic, strong)MJRefreshAutoNormalFooter *mjFooter;
 @end
 
 @implementation ViewController
-
-- (UIView *)aboutView {
-    if (_aboutView == nil) {
-        _aboutView = [[AboutView alloc] initWithFrame:self.MainView.frame];
-        _aboutView.alpha = 0;
-        [self.view addSubview:_aboutView];
-    }
-    return _aboutView;
-}
 
 - (void)getRules {
     [Http requesetWithUrl:@"http://www.moxcomic.com:23333/Store/getApp" params:nil sucess:^(id responseObject) {
@@ -72,8 +61,6 @@
     
     self.mjFooter = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(mjLoadMoreData)];
     self.MainView.mj_footer = self.mjFooter;
-    
-    
 }
 
 #pragma mark - MJRefreshHeader
@@ -136,26 +123,4 @@
     }];
 }
 
-- (IBAction)TabSelect:(id)sender {
-    UISegmentedControl *Seg = sender;
-    NSInteger Index = Seg.selectedSegmentIndex;
-    if (Index == 0)
-    {
-//        self.aboutView.hidden = YES;
-//        self.MainView.hidden = NO;
-        [UIView animateWithDuration:1 animations:^{
-            self.aboutView.alpha = 0;
-            self.MainView.alpha = 1;
-        }];
-    }
-    else
-    {
-//        self.aboutView.hidden = NO;
-//        self.MainView.hidden = YES;
-        [UIView animateWithDuration:1 animations:^{
-            self.aboutView.alpha = 1;
-            self.MainView.alpha = 0;
-        }];
-    }
-}
 @end

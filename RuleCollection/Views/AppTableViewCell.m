@@ -37,17 +37,17 @@
     
     
     //根据不同的需求 导入不同的AFNetworking的控件头文件例如<UIButton+AFNetworking.h>、<UIImageView+AFNetworking.h>
-    [self.imageViewIcon setImageWithURL:[NSURL URLWithString:model.picURL] placeholderImage:[UIImage imageNamed:@"NoImage"]];
+    [self.imageViewIcon setImageWithURL:[NSURL URLWithString:model.AppPicUrl] placeholderImage:[UIImage imageNamed:@"NoImage"]];
 //    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.picURL]]];
 //    self.imageViewIcon.image = image;
     
-    self.lblAppName.text = model.name;
+    self.lblAppName.text = model.AppName;
     
-    self.lblAuthorQQ.text = model.qq;
+    self.lblAuthorQQ.text = model.AuthorName;
     
-    self.lblAppVersion.text = model.ver;
+    self.lblAppVersion.text = model.AppVersion;
     
-    self.lblAppDescription.text = model.des;
+    self.lblAppDescription.text = model.AppDescription;
 }
 
 - (void)settingFrame {
@@ -130,14 +130,14 @@
         Download *download = [Download yy_modelWithJSON:responseObject];
         if (download.code == 0)
         {
-            NSString *urlStr = [NSString stringWithFormat:@"workflow://import-workflow/?url=%@.wflow&name=%@&silent=true",download.downloadURL,[Util urlEncodeStr:self.appFrame.app.name]];
+            NSString *urlStr = [NSString stringWithFormat:@"workflow://import-workflow/?url=%@.wflow&name=%@&silent=true",download.AppUrl,[Util urlEncodeStr:self.appFrame.app.AppName]];
             NSURL *url = [NSURL URLWithString:urlStr];
             [[UIApplication sharedApplication]openURL:url];
         }
         else
         {
             //无法找到该App下载地址
-            UIAlertController *actr = [UIAlertController alertControllerWithTitle:self.appFrame.app.name message:@"无法添加该应用" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *actr = [UIAlertController alertControllerWithTitle:self.appFrame.app.AppName message:@"无法添加该应用" preferredStyle:UIAlertControllerStyleAlert];
             UIViewController *controller = [Util getViewControllerWithView:self];
             UIAlertAction *ac = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 //这里面是点击“确定“按钮后的操作
@@ -154,7 +154,7 @@
 
 - (void)showInformation {
     Apps *_model = self.appFrame.app;
-    NSString *information = [NSString stringWithFormat:@"名称：%@\n作者QQ：%@\n版本：%@\n简介：%@",_model.name,_model.qq,_model.ver,_model.des];
+    NSString *information = [NSString stringWithFormat:@"名称：%@\n作者QQ：%@\n版本：%@\n简介：%@",_model.AppName,_model.AuthorQQ,_model.AppVersion,_model.AppDescription];
     UIAlertController *actr = [UIAlertController alertControllerWithTitle:@"详细信息" message:information preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *ac = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         //这里面是点击“确定“按钮后的操作
