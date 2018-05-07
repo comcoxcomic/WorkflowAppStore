@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020FE28A20A0267300CF4D76 /* AppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 020FE28920A0267300CF4D76 /* AppCell.m */; };
 		0211D101207DFE2700E70EB9 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 0211D100207DFE2700E70EB9 /* Util.m */; };
 		024143312084A72F00990368 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 024143302084A72F00990368 /* AboutViewController.m */; };
 		0270A3A520614D40008C68F2 /* App.m in Sources */ = {isa = PBXBuildFile; fileRef = 0270A3A420614D40008C68F2 /* App.m */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		020FE28820A0267300CF4D76 /* AppCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppCell.h; sourceTree = "<group>"; };
+		020FE28920A0267300CF4D76 /* AppCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppCell.m; sourceTree = "<group>"; };
 		0211D0FF207DFE2700E70EB9 /* Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 		0211D100207DFE2700E70EB9 /* Util.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		0241432F2084A72F00990368 /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 				02F7F640205D54A80076245B /* Main.storyboard */,
 				02B2233420803879006CA8D1 /* AppTableViewCell.h */,
 				02B2233520803879006CA8D1 /* AppTableViewCell.m */,
+				020FE28820A0267300CF4D76 /* AppCell.h */,
+				020FE28920A0267300CF4D76 /* AppCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -451,6 +456,7 @@
 				02F7F63C205D54A80076245B /* AppDelegate.m in Sources */,
 				0211D101207DFE2700E70EB9 /* Util.m in Sources */,
 				024143312084A72F00990368 /* AboutViewController.m in Sources */,
+				020FE28A20A0267300CF4D76 /* AppCell.m in Sources */,
 				02930B05209F86F5006F96B4 /* CangKuCollectionViewController.m in Sources */,
 				02B2233620803879006CA8D1 /* AppTableViewCell.m in Sources */,
 			);

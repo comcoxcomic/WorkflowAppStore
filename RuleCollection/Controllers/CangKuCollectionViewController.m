@@ -28,7 +28,6 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.mjHeader = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(mjRefreshData)];
     // 设置自动切换透明度(在导航栏下面自动隐藏)
     self.mjHeader.automaticallyChangeAlpha = YES;
@@ -115,12 +114,48 @@ static NSString * const reuseIdentifier = @"Cell";
     
     cell.backgroundColor = [UIColor greenColor];
     
+    //App图标
+    UIImageView *icon = [[UIImageView alloc] init];
+    icon.translatesAutoresizingMaskIntoConstraints = NO;
+    icon.backgroundColor = [UIColor blueColor];
+    [cell addSubview:icon];
+    
+    //App图标水平居中
+    NSLayoutConstraint *iconConstraintX = [NSLayoutConstraint constraintWithItem:icon attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:cell attribute:NSLayoutAttributeCenterX multiplier:1 constant:0];
+    [cell addConstraint:iconConstraintX];
+    //App图标高度
+    NSLayoutConstraint *iconConstraintH = [NSLayoutConstraint constraintWithItem:icon attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:cell attribute:NSLayoutAttributeCenterY multiplier:1 constant:0];
+    [cell addConstraint:iconConstraintH];
+    //App图标宽度
+    NSLayoutConstraint *iconConstraintW = [NSLayoutConstraint constraintWithItem:icon attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:cell attribute:NSLayoutAttributeHeight multiplier:0.5 constant:0];
+    [cell addConstraint:iconConstraintW];
+    //App图标Y轴
+    NSLayoutConstraint *iconConstraintY = [NSLayoutConstraint constraintWithItem:icon attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:cell attribute:NSLayoutAttributeTop multiplier:1 constant:5];
+    [cell addConstraint:iconConstraintY];
+    
+    
+    UILabel *name = [[UILabel alloc] init];
+    name.translatesAutoresizingMaskIntoConstraints = NO;
+    Apps *app = self.appsArr[indexPath.row];
+    name.text = app.AppName;
+    name.textColor = [UIColor whiteColor];
+    [cell addSubview:name];
+    
+    //AppName水平居中
+    NSLayoutConstraint *nameConstraintX = [NSLayoutConstraint constraintWithItem:name attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:cell attribute:NSLayoutAttributeCenterX multiplier:1 constant:0];
+    [cell addConstraint:nameConstraintX];
+    
+    //AppNameY轴
+    NSLayoutConstraint *nameConstraintY = [NSLayoutConstraint constraintWithItem:name attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:icon attribute:NSLayoutAttributeBottom multiplier:1 constant:10];
+    [cell addConstraint:nameConstraintY];
+    
     return cell;
 }
 
 #pragma mark UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(self.view.frame.size.width/2-10, self.view.frame.size.height/3-10);
+    //self.view.frame.size.height/3-10
+    return CGSizeMake(self.view.frame.size.width/2-10, 200);
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
