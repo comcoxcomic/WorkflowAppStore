@@ -189,6 +189,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="我" id="7CZ-Vz-Qft"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="juT-00-E7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
