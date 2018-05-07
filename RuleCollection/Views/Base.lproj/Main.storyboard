@@ -624,6 +624,9 @@
                                 <state key="normal" title="登录">
                                     <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="login:" destination="i4T-rm-vyz" eventType="touchUpInside" id="UPe-tX-5ER"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYk-xs-6UT">
                                 <rect key="frame" x="307" y="390" width="77" height="30"/>
@@ -679,6 +682,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="btnLogin" destination="cob-h8-Uy8" id="G2d-ND-0hj"/>
+                        <outlet property="txtPassword" destination="Def-wf-bzR" id="ojd-P0-zMB"/>
+                        <outlet property="txtUserName" destination="Txw-au-pHe" id="IzU-mz-slw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCn-X3-x1S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

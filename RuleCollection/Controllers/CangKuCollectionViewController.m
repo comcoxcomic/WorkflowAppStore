@@ -147,7 +147,6 @@ static NSString * const reuseIdentifier = @"Cell";
     NSLayoutConstraint *iconConstraintY = [NSLayoutConstraint constraintWithItem:icon attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:cell attribute:NSLayoutAttributeTop multiplier:1 constant:5];
     [cell addConstraint:iconConstraintY];
     
-    
     UILabel *name = [[UILabel alloc] init];
     name.translatesAutoresizingMaskIntoConstraints = NO;
     name.textAlignment = NSTextAlignmentCenter;

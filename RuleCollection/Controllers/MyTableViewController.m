@@ -42,6 +42,10 @@
     }
 }
 
+- (void)loginWithUsername:(NSString *)userName password:(NSString *)password {
+    
+}
+
 - (void)showLoginVC {
     //LoginViewController *lvc = [[LoginViewController alloc] init];
     
