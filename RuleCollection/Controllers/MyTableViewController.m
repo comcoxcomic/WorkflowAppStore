@@ -10,12 +10,8 @@
 #import "LoginViewController.h"
 #import "AppDelegate.h"
 
-<<<<<<< HEAD
-@interface MyTableViewController ()
+@interface MyTableViewController () <UITabBarControllerDelegate>
 @property (nonatomic, assign) BOOL isLogin;
-=======
-@interface MyTableViewController ()<UITabBarControllerDelegate>
->>>>>>> dca77e9f0422d648708ad66ac08db02ccc1b02a8
 @end
 
 @implementation MyTableViewController
@@ -32,7 +28,6 @@
         
     }
     else {
-<<<<<<< HEAD
         NSLog(@"2222");
         //Storyboard里面创建的视图 你需要用下面这个方法从Storyboard里面取出来
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
@@ -40,7 +35,6 @@
         [self presentViewController:lvc animated:YES completion:^{
             
         }];
-=======
         [self showLoginVC];
     }
 }
@@ -63,7 +57,6 @@
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
     if (self.tabBarController.selectedIndex == 1) {
         [self showLoginVC];
->>>>>>> dca77e9f0422d648708ad66ac08db02ccc1b02a8
     }
 }
 
