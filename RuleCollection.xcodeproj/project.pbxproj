@@ -10,7 +10,6 @@
 		020FE28D20A0511900CF4D76 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 020FE28C20A0511900CF4D76 /* MyTableViewController.m */; };
 		020FE29320A0560600CF4D76 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 020FE29220A0560600CF4D76 /* LoginViewController.m */; };
 		0211D101207DFE2700E70EB9 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 0211D100207DFE2700E70EB9 /* Util.m */; };
-		02187CB220A064D1001EDFFE /* LoginRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02187CB120A064D1001EDFFE /* LoginRootViewController.m */; };
 		0270A3A520614D40008C68F2 /* App.m in Sources */ = {isa = PBXBuildFile; fileRef = 0270A3A420614D40008C68F2 /* App.m */; };
 		02930B05209F86F5006F96B4 /* CangKuCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02930B04209F86F5006F96B4 /* CangKuCollectionViewController.m */; };
 		029C7F492067DAB300C9AB74 /* Download.m in Sources */ = {isa = PBXBuildFile; fileRef = 029C7F482067DAB300C9AB74 /* Download.m */; };
@@ -51,8 +50,6 @@
 		020FE29220A0560600CF4D76 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		0211D0FF207DFE2700E70EB9 /* Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 		0211D100207DFE2700E70EB9 /* Util.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
-		02187CB020A064D1001EDFFE /* LoginRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginRootViewController.h; sourceTree = "<group>"; };
-		02187CB120A064D1001EDFFE /* LoginRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginRootViewController.m; sourceTree = "<group>"; };
 		0270A3A320614D40008C68F2 /* App.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
 		0270A3A420614D40008C68F2 /* App.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = App.m; sourceTree = "<group>"; };
 		02930B03209F86F5006F96B4 /* CangKuCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CangKuCollectionViewController.h; sourceTree = "<group>"; };
@@ -129,8 +126,6 @@
 				020FE28C20A0511900CF4D76 /* MyTableViewController.m */,
 				020FE29120A0560600CF4D76 /* LoginViewController.h */,
 				020FE29220A0560600CF4D76 /* LoginViewController.m */,
-				02187CB020A064D1001EDFFE /* LoginRootViewController.h */,
-				02187CB120A064D1001EDFFE /* LoginRootViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -455,7 +450,6 @@
 				02F7F64A205D54A80076245B /* main.m in Sources */,
 				02F7F63C205D54A80076245B /* AppDelegate.m in Sources */,
 				0211D101207DFE2700E70EB9 /* Util.m in Sources */,
-				02187CB220A064D1001EDFFE /* LoginRootViewController.m in Sources */,
 				02930B05209F86F5006F96B4 /* CangKuCollectionViewController.m in Sources */,
 				020FE29320A0560600CF4D76 /* LoginViewController.m in Sources */,
 				02B2233620803879006CA8D1 /* AppTableViewCell.m in Sources */,
