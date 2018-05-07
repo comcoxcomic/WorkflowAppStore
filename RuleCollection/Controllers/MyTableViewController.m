@@ -44,7 +44,7 @@
     
     //Storyboard里面创建的视图 你需要用下面这个方法从Storyboard里面取出来
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    LoginViewController *lvc = (LoginViewController *)[sb instantiateViewControllerWithIdentifier:@"LoginvcId"];
+    LoginViewController *lvc = (LoginViewController *)[sb instantiateViewControllerWithIdentifier:@"LoginVCId"];
     
     NSLog(@"---222---");
     //        AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
