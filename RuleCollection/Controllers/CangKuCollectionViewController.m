@@ -8,6 +8,7 @@
 
 #import "CangKuCollectionViewController.h"
 #import <MJRefresh.h>
+#import <UIImageView+AFNetworking.h>
 #import "App.h"
 
 @interface CangKuCollectionViewController ()
@@ -110,14 +111,26 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    //创建Cell
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    //移除Cell上所有的子控件
+    [cell.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    //获取App模型
+    Apps *app = self.appsArr[indexPath.row];
     
-    cell.backgroundColor = [UIColor greenColor];
+    cell.backgroundColor = [Util randomColor];
+    //[cell.layer setBorderColor:[[UIColor blueColor] CGColor]];
+    //[cell.layer setBorderWidth:1];
+    [cell.layer setCornerRadius:10];
+    [cell.layer setMasksToBounds:YES];
     
     //App图标
     UIImageView *icon = [[UIImageView alloc] init];
     icon.translatesAutoresizingMaskIntoConstraints = NO;
-    icon.backgroundColor = [UIColor blueColor];
+    icon.layer.cornerRadius = 10;
+    [icon.layer setMasksToBounds:YES];
+    //icon.backgroundColor = [UIColor blueColor];
+    [icon setImageWithURL:[NSURL URLWithString:app.AppPicUrl] placeholderImage:[UIImage imageNamed:@"AboutIcon"]];
     [cell addSubview:icon];
     
     //App图标水平居中
@@ -136,9 +149,8 @@ static NSString * const reuseIdentifier = @"Cell";
     
     UILabel *name = [[UILabel alloc] init];
     name.translatesAutoresizingMaskIntoConstraints = NO;
-    Apps *app = self.appsArr[indexPath.row];
+    name.textAlignment = NSTextAlignmentCenter;
     name.text = app.AppName;
-    name.textColor = [UIColor whiteColor];
     [cell addSubview:name];
     
     //AppName水平居中
@@ -146,8 +158,31 @@ static NSString * const reuseIdentifier = @"Cell";
     [cell addConstraint:nameConstraintX];
     
     //AppNameY轴
-    NSLayoutConstraint *nameConstraintY = [NSLayoutConstraint constraintWithItem:name attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:icon attribute:NSLayoutAttributeBottom multiplier:1 constant:10];
+    NSLayoutConstraint *nameConstraintY = [NSLayoutConstraint constraintWithItem:name attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:icon attribute:NSLayoutAttributeBottom multiplier:1 constant:5];
     [cell addConstraint:nameConstraintY];
+    
+    //AppName宽度
+    NSLayoutConstraint *nameConstraintW = [NSLayoutConstraint constraintWithItem:name attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:cell attribute:NSLayoutAttributeWidth multiplier:1 constant:0];
+    [cell addConstraint:nameConstraintW];
+    
+    UILabel *amount = [[UILabel alloc] init];
+    amount.translatesAutoresizingMaskIntoConstraints = NO;
+    amount.textColor = [UIColor redColor];
+    amount.textAlignment = NSTextAlignmentCenter;
+    amount.text = @"¥:免费";
+    [cell addSubview:amount];
+    
+    //AppName水平居中
+    NSLayoutConstraint *amountConstraintX = [NSLayoutConstraint constraintWithItem:amount attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:cell attribute:NSLayoutAttributeCenterX multiplier:1 constant:0];
+    [cell addConstraint:amountConstraintX];
+    
+    //AppNameY轴
+    NSLayoutConstraint *amountConstraintY = [NSLayoutConstraint constraintWithItem:amount attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:name attribute:NSLayoutAttributeBottom multiplier:1 constant:5];
+    [cell addConstraint:amountConstraintY];
+    
+    //AppName宽度
+    NSLayoutConstraint *amountConstraintW = [NSLayoutConstraint constraintWithItem:amount attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:cell attribute:NSLayoutAttributeWidth multiplier:1 constant:0];
+    [cell addConstraint:amountConstraintW];
     
     return cell;
 }
@@ -155,7 +190,7 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     //self.view.frame.size.height/3-10
-    return CGSizeMake(self.view.frame.size.width/2-10, 200);
+    return CGSizeMake(self.view.frame.size.width/2-10, 110);
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{

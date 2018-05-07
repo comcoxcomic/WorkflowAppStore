@@ -1,5 +1,5 @@
 //
-//  AppCell.h
+//  MyTableViewController.h
 //  RuleCollection
 //
 //  Created by 神崎H亚里亚 on 2018/5/7.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class Apps;
 
-@interface AppCell : UICollectionViewCell
-@property (nonatomic, strong) Apps *App;
+@interface MyTableViewController : UITableViewController
+
 @end
