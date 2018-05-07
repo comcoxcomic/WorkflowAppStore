@@ -26,6 +26,7 @@ PODS:
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
   - SocketRocket (0.5.1)
+  - SVProgressHUD (2.2.5)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
@@ -40,6 +41,7 @@ DEPENDENCIES:
   - SAMKeychain
   - SDWebImage
   - SocketRocket
+  - SVProgressHUD
   - YYModel
 
 SPEC CHECKSUMS:
@@ -54,8 +56,9 @@ SPEC CHECKSUMS:
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 603197712e8d40c348782c677fd1caf5de5f279f
+PODFILE CHECKSUM: 4d9a20dadcede6bcf2bd681cf7f31ec38237109d
 
 COCOAPODS: 1.4.0

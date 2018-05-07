@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LoginRootViewController : UIViewController
-@property (nonatomic, copy) void (^jumpToIndex)(BOOL isSuccess);
+@property (nonatomic, copy) void (^Success)(BOOL isSuccess, NSString *userName);
 @end

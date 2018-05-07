@@ -11,6 +11,7 @@
 #import <UIImageView+AFNetworking.h>
 #import "App.h"
 #import "AppViewController.h"
+#import "NSString+Extension.h"
 
 @interface CangKuCollectionViewController ()
 

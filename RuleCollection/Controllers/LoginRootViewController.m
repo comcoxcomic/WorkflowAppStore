@@ -7,6 +7,8 @@
 //
 
 #import "LoginRootViewController.h"
+#import <SVProgressHUD.h>
+#import "Result.h"
 
 @interface LoginRootViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *txtUserName;
@@ -17,20 +19,50 @@
 
 @implementation LoginRootViewController
 - (IBAction)login:(id)sender {
-    NSString *params = [NSString stringWithFormat:@"username=%@&pwd=%@", [Util urlEncodeStr:self.txtUserName.text], self.txtPassword.text];
-    NSLog(@"%@", params);
+    
+    [self.view endEditing:YES];
+    
+    UIView *uv = [[UIView alloc] init];
+    uv.backgroundColor = [UIColor blackColor];
+    uv.alpha = 0.7;
+    uv.frame = self.view.bounds;
+    [self.view addSubview:uv];
+    
+    [SVProgressHUD showWithStatus:@"正在登录..."];
+    NSDictionary *params = @{ @"username":self.txtUserName.text, @"pwd":self.txtPassword.text };
     [Http requesetWithUrl:@"http://www.moxcomic.com:23333/Store/Login" params:params sucess:^(id responseObject) {
-        NSLog(@"成功%@", responseObject);
+        Result *res = [Result yy_modelWithJSON:responseObject];
+        if ([res.code isEqualToString:@"200"]) {
+            //登录成功
+            //[uv removeFromSuperview];
+            [SVProgressHUD showSuccessWithStatus:@"登录成功"];
+            NSString *docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+            NSString *filePath = [docPath stringByAppendingPathComponent:@"UserConfig.plist"];
+            NSDictionary *dict = @{ @"username":self.txtUserName.text, @"pwd":self.txtPassword.text };
+            [dict writeToFile:filePath atomically:YES];
+            [self performSelector:@selector(dissmissWithSuccess:) withObject:@"YES" afterDelay:1.5];
+        }
+        else {
+            [SVProgressHUD showErrorWithStatus:res.msg];
+            //[uv removeFromSuperview];
+            [uv performSelector:@selector(removeFromSuperview) withObject:nil afterDelay:5];
+        }
+        
     } failure:^(id responseObject) {
-        NSLog(@"失败%@", responseObject);
+        //[SVProgressHUD showErrorWithStatus:responseObject];
     }];
 }
-- (IBAction)exitLogin:(id)sender {
+
+- (void)dissmissWithSuccess:(NSObject *)success {
     [self dismissViewControllerAnimated:YES completion:^{
-        if (self.jumpToIndex){
-            self.jumpToIndex(NO);
+        if (self.Success){
+            self.Success((BOOL)success, self.txtUserName.text);
         }
     }];
+}
+
+- (IBAction)exitLogin:(id)sender {
+    [self dissmissWithSuccess:@"NO"];
 }
 
 - (void)viewDidLoad {

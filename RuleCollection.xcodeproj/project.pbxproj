@@ -13,6 +13,8 @@
 		0270A3A520614D40008C68F2 /* App.m in Sources */ = {isa = PBXBuildFile; fileRef = 0270A3A420614D40008C68F2 /* App.m */; };
 		027E462520A09C7000C8D99C /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 027E462420A09C7000C8D99C /* RegisterViewController.m */; };
 		027E462820A0A2AB00C8D99C /* AppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 027E462720A0A2AB00C8D99C /* AppViewController.m */; };
+		0282AC1620A0F6AB004284DC /* Result.m in Sources */ = {isa = PBXBuildFile; fileRef = 0282AC1520A0F6AB004284DC /* Result.m */; };
+		0282AC2320A10419004284DC /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0282AC2220A10419004284DC /* NSString+Extension.m */; };
 		02930B05209F86F5006F96B4 /* CangKuCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02930B04209F86F5006F96B4 /* CangKuCollectionViewController.m */; };
 		029C7F492067DAB300C9AB74 /* Download.m in Sources */ = {isa = PBXBuildFile; fileRef = 029C7F482067DAB300C9AB74 /* Download.m */; };
 		02B2233620803879006CA8D1 /* AppTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B2233520803879006CA8D1 /* AppTableViewCell.m */; };
@@ -58,6 +60,10 @@
 		027E462420A09C7000C8D99C /* RegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		027E462620A0A2AB00C8D99C /* AppViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppViewController.h; sourceTree = "<group>"; };
 		027E462720A0A2AB00C8D99C /* AppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppViewController.m; sourceTree = "<group>"; };
+		0282AC1420A0F6AB004284DC /* Result.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Result.h; sourceTree = "<group>"; };
+		0282AC1520A0F6AB004284DC /* Result.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Result.m; sourceTree = "<group>"; };
+		0282AC2120A10419004284DC /* NSString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		0282AC2220A10419004284DC /* NSString+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		02930B03209F86F5006F96B4 /* CangKuCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CangKuCollectionViewController.h; sourceTree = "<group>"; };
 		02930B04209F86F5006F96B4 /* CangKuCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CangKuCollectionViewController.m; sourceTree = "<group>"; };
 		029C7F472067DAB300C9AB74 /* Download.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Download.h; sourceTree = "<group>"; };
@@ -160,6 +166,8 @@
 				029C7F482067DAB300C9AB74 /* Download.m */,
 				02B2233820804A71006CA8D1 /* AppFrame.h */,
 				02B2233920804A71006CA8D1 /* AppFrame.m */,
+				0282AC1420A0F6AB004284DC /* Result.h */,
+				0282AC1520A0F6AB004284DC /* Result.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -171,6 +179,15 @@
 				02F7F63B205D54A80076245B /* AppDelegate.m */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		0282AC1720A101FD004284DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0282AC2120A10419004284DC /* NSString+Extension.h */,
+				0282AC2220A10419004284DC /* NSString+Extension.m */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		02DD5C1F206780A500E6933C /* HTTP */ = {
@@ -207,6 +224,7 @@
 		02F7F639205D54A80076245B /* RuleCollection */ = {
 			isa = PBXGroup;
 			children = (
+				0282AC1720A101FD004284DC /* Extensions */,
 				0211D0FE207DFE0C00E70EB9 /* Utils */,
 				02DD5C1F206780A500E6933C /* HTTP */,
 				0270A3A62061575E008C68F2 /* Controllers */,
@@ -399,6 +417,7 @@
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SAMKeychain/Support/SAMKeychain.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -406,6 +425,7 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SAMKeychain.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -462,6 +482,8 @@
 				027E462520A09C7000C8D99C /* RegisterViewController.m in Sources */,
 				027E462820A0A2AB00C8D99C /* AppViewController.m in Sources */,
 				0211D101207DFE2700E70EB9 /* Util.m in Sources */,
+				0282AC2320A10419004284DC /* NSString+Extension.m in Sources */,
+				0282AC1620A0F6AB004284DC /* Result.m in Sources */,
 				0223203520A081FE003E2E86 /* LoginRootViewController.m in Sources */,
 				02930B05209F86F5006F96B4 /* CangKuCollectionViewController.m in Sources */,
 				02B2233620803879006CA8D1 /* AppTableViewCell.m in Sources */,

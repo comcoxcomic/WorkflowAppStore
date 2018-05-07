@@ -21,15 +21,7 @@
     
     self.tabBarController.delegate = self;
     
-    NSString *docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-    NSString *filePath = [docPath stringByAppendingPathComponent:@"UserConfig.plist"];
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    if ([fileManager fileExistsAtPath:filePath]) {
-        
-    }
-    else {
-        self.tabBarController.delegate = self;
-        
+    if (!self.isLogin) {
         NSString *docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
         NSString *filePath = [docPath stringByAppendingPathComponent:@"UserConfig.plist"];
         NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -37,7 +29,17 @@
             
         }
         else {
-            [self showLoginVC];
+            self.tabBarController.delegate = self;
+            
+            NSString *docPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+            NSString *filePath = [docPath stringByAppendingPathComponent:@"UserConfig.plist"];
+            NSFileManager *fileManager = [NSFileManager defaultManager];
+            if ([fileManager fileExistsAtPath:filePath]) {
+                
+            }
+            else {
+                [self showLoginVC];
+            }
         }
     }
 }
@@ -52,13 +54,15 @@
     //Storyboard里面创建的视图 你需要用下面这个方法从Storyboard里面取出来
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     LoginRootViewController *lvc = (LoginRootViewController *)[sb instantiateViewControllerWithIdentifier:@"LoginRootVCId"];
-    lvc.jumpToIndex = ^(BOOL isSuccess){
+    lvc.Success = ^(BOOL isSuccess, NSString *userName){
         if (!isSuccess){
             //用户取消登录
             //self.tabBarController.selectedIndex = 0;
         }
         else {
             //登录成功
+            self.isLogin = YES;
+            
         }
     };
     [self presentViewController:lvc animated:YES completion:^{
