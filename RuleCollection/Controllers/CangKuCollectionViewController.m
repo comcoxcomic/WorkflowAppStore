@@ -10,6 +10,7 @@
 #import <MJRefresh.h>
 #import <UIImageView+AFNetworking.h>
 #import "App.h"
+#import "AppViewController.h"
 
 @interface CangKuCollectionViewController ()
 
@@ -195,6 +196,18 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
     return UIEdgeInsetsMake(10, 5, 10, 5);
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    Apps *app = self.appsArr[indexPath.row];
+    //Storyboard里面创建的视图 你需要用下面这个方法从Storyboard里面取出来
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    AppViewController *lvc = (AppViewController *)[sb instantiateViewControllerWithIdentifier:@"AppVCId"];
+    
+    lvc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:lvc animated:YES completion:^{
+        lvc.App = app;
+    }];
 }
 
 #pragma mark <UICollectionViewDelegate>

@@ -15,7 +15,9 @@
 @implementation LoginRootViewController
 - (IBAction)exitLogin:(id)sender {
     [self dismissViewControllerAnimated:YES completion:^{
-        
+        if (self.jumpToIndex){
+            self.jumpToIndex(NO);
+        }
     }];
 }
 

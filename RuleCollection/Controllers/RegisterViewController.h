@@ -1,5 +1,5 @@
 //
-//  LoginRootViewController.h
+//  RegisterViewController.h
 //  RuleCollection
 //
 //  Created by 神崎H亚里亚 on 2018/5/7.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginRootViewController : UIViewController
-@property (nonatomic, copy) void (^jumpToIndex)(BOOL isSuccess);
+@interface RegisterViewController : UIViewController
+
 @end

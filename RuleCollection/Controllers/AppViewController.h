@@ -1,5 +1,5 @@
 //
-//  LoginViewController.h
+//  AppViewController.h
 //  RuleCollection
 //
 //  Created by 神崎H亚里亚 on 2018/5/7.
@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Apps;
 
-@interface LoginViewController : UINavigationController
-
+@interface AppViewController : UIViewController
+@property (nonatomic, copy) Apps *App;
 @end
