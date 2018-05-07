@@ -13,7 +13,7 @@
 @interface CangKuCollectionViewController ()
 
 //App数据
-@property (nonatomic, strong) NSArray *Apps;
+@property (nonatomic, retain) NSMutableArray *appsArr;
 
 //刷新
 @property (nonatomic, strong)MJRefreshNormalHeader *mjHeader;
@@ -22,26 +22,6 @@
 @end
 
 @implementation CangKuCollectionViewController
-
-- (NSArray *)Apps{
-    
-    if (!_Apps){
-        NSMutableArray *arr = [NSMutableArray array];
-        [Http requesetWithUrl:@"http://www.moxcomic.com:23333/Store/getApp" params:nil sucess:^(id responseObject) {
-            App *app = [App yy_modelWithJSON:responseObject];
-            for (int i = 0; i < app.apps.count; i++) {
-                [arr addObject:app.apps[i]];
-            }
-            _Apps = arr;
-            //结束刷新状态
-            [self.mjHeader endRefreshing];
-            
-        } failure:^(id responseObject) {
-            NSLog(@"%@",responseObject);
-        }];
-    }
-    return _Apps;
-}
 
 //重用Id
 static NSString * const reuseIdentifier = @"Cell";
@@ -64,11 +44,27 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
 }
 
+#pragma mark - RequestData
+- (void)requestAppsData {
+    [Http requesetWithUrl:@"http://www.moxcomic.com:23333/Store/getApp" params:nil sucess:^(id responseObject) {
+        App *app = [App yy_modelWithJSON:responseObject];
+        self.appsArr = [NSMutableArray arrayWithArray:app.apps];
+        [self.collectionView reloadData];
+        //结束刷新状态
+        [self.mjHeader endRefreshing];
+        [self.mjFooter setState:MJRefreshStateNoMoreData];
+        
+    } failure:^(id responseObject) {
+        NSLog(@"%@",responseObject);
+        
+        //结束刷新状态
+        [self.mjHeader endRefreshing];
+    }];
+}
+
 #pragma mark - MJRefreshHeader
 - (void)mjRefreshData {
-    _Apps = [self Apps];
-    [self.mjHeader endEditing:YES];
-    [self.collectionView reloadData];
+    [self requestAppsData];
 }
 #pragma mark - MJRefreshFooter
 - (void)mjLoadMoreData {
@@ -111,7 +107,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.Apps.count;
+    return self.appsArr.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
