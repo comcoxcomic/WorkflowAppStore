@@ -11,7 +11,7 @@
 #import "AppDelegate.h"
 
 @interface MyTableViewController ()
-
+@property (nonatomic, assign) BOOL isLogin;
 @end
 
 @implementation MyTableViewController
@@ -29,15 +29,23 @@
         NSLog(@"2222");
         //Storyboard里面创建的视图 你需要用下面这个方法从Storyboard里面取出来
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        LoginViewController *lvc = (LoginViewController *)[sb instantiateViewControllerWithIdentifier:@"LoginvcId"];
+        LoginViewController *lvc = (LoginViewController *)[sb instantiateViewControllerWithIdentifier:@"LoginVCId"];
         [self presentViewController:lvc animated:YES completion:^{
-
+            
         }];
     }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 1 && indexPath.row == 0){
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UIViewController *lvc = [sb instantiateViewControllerWithIdentifier:@"PermissionVCId"];
+        [self.navigationController pushViewController:lvc animated:YES];
+    }
 }
 
 //#pragma mark - Table view data source

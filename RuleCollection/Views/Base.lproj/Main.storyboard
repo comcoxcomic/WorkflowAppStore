@@ -192,12 +192,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="juT-00-E7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1619" y="271"/>
+            <point key="canvasLocation" x="-1704" y="271"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="2c4-ms-1Xc">
             <objects>
-                <navigationController storyboardIdentifier="LoginvcId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="016-rJ-ZM3" customClass="LoginViewController" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginVCId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="016-rJ-ZM3" customClass="LoginViewController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zZF-QZ-6yu">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -293,7 +293,95 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1R-Cv-mKw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1046" y="1025"/>
+            <point key="canvasLocation" x="-1030" y="1025"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fzc-2a-Pwu">
+            <objects>
+                <navigationController storyboardIdentifier="PermissionVCId" id="CbU-HV-S3a" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="iwb-zU-akZ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mpi-8A-12E">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bht-n4-xdV" kind="relationship" relationship="rootViewController" id="o0x-tg-AFc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k0s-5w-W9T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1030" y="271"/>
+        </scene>
+        <!--开发者权限申请-->
+        <scene sceneID="Lpx-cq-SDs">
+            <objects>
+                <viewController id="bht-n4-xdV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YV5-Yt-LLi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AboutIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Sjv-hh-CpB">
+                                <rect key="frame" x="107" y="64" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="23x-sA-0Ka"/>
+                                    <constraint firstAttribute="height" constant="200" id="Aez-sn-Mzk"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请填入准备进行审核的规则 - 第一条" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ruu-dc-P01">
+                                <rect key="frame" x="30" y="284" width="354" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请填入准备进行审核的规则 - 第二条" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="V8P-Dj-y57">
+                                <rect key="frame" x="30.666666666666657" y="314" width="354" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请填入准备进行审核的规则 - 第三条" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="iZy-1D-udP">
+                                <rect key="frame" x="30.666666666666657" y="344" width="354" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNT-mq-ZrS">
+                                <rect key="frame" x="30" y="384" width="354" height="30"/>
+                                <color key="backgroundColor" red="0.1176470588" green="0.56470588239999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="提交审核">
+                                    <color key="titleColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="V8P-Dj-y57" firstAttribute="width" secondItem="ruu-dc-P01" secondAttribute="width" id="1iC-LP-GCV"/>
+                            <constraint firstItem="Sjv-hh-CpB" firstAttribute="top" secondItem="3ra-Jx-AeE" secondAttribute="top" id="3J7-iM-3Dc"/>
+                            <constraint firstItem="SNT-mq-ZrS" firstAttribute="height" secondItem="iZy-1D-udP" secondAttribute="height" id="Abl-Z1-Sca"/>
+                            <constraint firstItem="iZy-1D-udP" firstAttribute="centerX" secondItem="V8P-Dj-y57" secondAttribute="centerX" id="BzX-NV-k45"/>
+                            <constraint firstItem="V8P-Dj-y57" firstAttribute="height" secondItem="ruu-dc-P01" secondAttribute="height" id="GYF-Ls-871"/>
+                            <constraint firstAttribute="trailing" secondItem="ruu-dc-P01" secondAttribute="trailing" constant="30" id="HqM-GP-lqH"/>
+                            <constraint firstItem="ruu-dc-P01" firstAttribute="top" secondItem="Sjv-hh-CpB" secondAttribute="bottom" constant="20" id="Q2U-Wq-NT5"/>
+                            <constraint firstItem="SNT-mq-ZrS" firstAttribute="width" secondItem="iZy-1D-udP" secondAttribute="width" id="S0x-HH-6jj"/>
+                            <constraint firstItem="V8P-Dj-y57" firstAttribute="top" secondItem="ruu-dc-P01" secondAttribute="bottom" id="TcC-dy-LLZ"/>
+                            <constraint firstItem="SNT-mq-ZrS" firstAttribute="centerX" secondItem="iZy-1D-udP" secondAttribute="centerX" id="Zq9-cR-8Vi"/>
+                            <constraint firstItem="Sjv-hh-CpB" firstAttribute="top" secondItem="3ra-Jx-AeE" secondAttribute="top" id="dcj-1X-7c4"/>
+                            <constraint firstItem="ruu-dc-P01" firstAttribute="leading" secondItem="3ra-Jx-AeE" secondAttribute="leading" constant="30" id="gTQ-CA-R2k"/>
+                            <constraint firstItem="iZy-1D-udP" firstAttribute="width" secondItem="V8P-Dj-y57" secondAttribute="width" id="ije-r6-vdO"/>
+                            <constraint firstItem="SNT-mq-ZrS" firstAttribute="top" secondItem="iZy-1D-udP" secondAttribute="bottom" constant="10" id="j6C-6p-Pf9"/>
+                            <constraint firstItem="iZy-1D-udP" firstAttribute="top" secondItem="V8P-Dj-y57" secondAttribute="bottom" id="oA7-HF-17O"/>
+                            <constraint firstItem="iZy-1D-udP" firstAttribute="height" secondItem="V8P-Dj-y57" secondAttribute="height" id="ob1-iM-Kj3"/>
+                            <constraint firstItem="V8P-Dj-y57" firstAttribute="centerX" secondItem="ruu-dc-P01" secondAttribute="centerX" id="uWx-01-aAj"/>
+                            <constraint firstItem="Sjv-hh-CpB" firstAttribute="centerX" secondItem="YV5-Yt-LLi" secondAttribute="centerX" id="xCV-26-BnX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3ra-Jx-AeE"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="开发者权限申请" id="IL9-pI-ZuU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="98j-r3-SMX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-357" y="271"/>
         </scene>
         <!--登录账号-->
         <scene sceneID="xgg-YO-4e2">
@@ -310,13 +398,13 @@
                                     <constraint firstAttribute="width" constant="200" id="yeV-eg-TpH"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Txw-au-pHe">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入账号" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Txw-au-pHe">
                                 <rect key="frame" x="30" y="284" width="354" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Def-wf-bzR">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Def-wf-bzR">
                                 <rect key="frame" x="30" y="314" width="354" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
