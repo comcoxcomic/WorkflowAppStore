@@ -12,19 +12,16 @@
 
 @interface MyTableViewController () <UITabBarControllerDelegate>
 @property (nonatomic, assign) BOOL isLogin;
+@property (weak, nonatomic) IBOutlet UILabel *lblUserName;
 @end
 
 @implementation MyTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.tabBarController.delegate = self;
-    
     if (!self.isLogin) {
-        if (!self.isLogin) {
-            [self showLoginVC];
-        }
+        [self showLoginVC];
     }
 }
 
@@ -46,7 +43,7 @@
         else {
             //登录成功
             self.isLogin = YES;
-            
+            self.lblUserName.text = userName;
         }
     };
     [self presentViewController:lvc animated:YES completion:^{
@@ -56,7 +53,8 @@
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
     if (self.tabBarController.selectedIndex == 1) {
-        [self showLoginVC];
+        if (!self.isLogin)
+            [self showLoginVC];
     }
 }
 
