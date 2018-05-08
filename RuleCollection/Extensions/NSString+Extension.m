@@ -10,6 +10,28 @@
 #import <CommonCrypto/CommonCrypto.h>
 
 @implementation NSString (Extension)
+- (BOOL)isNullOrWhiteSpace {
+    if (!self) {
+        return YES;
+    }
+    if ([self isKindOfClass:[NSNull class]]) {
+        return YES;
+    }
+    NSCharacterSet *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    NSString *trimmedStr = [self stringByTrimmingCharactersInSet:set];
+    if (!trimmedStr.length) {
+        return YES;
+    }
+    return NO;
+}
+
+-(NSString *)urlEncode {
+    NSString *charactersToEscape = @"?!@#$^&%*+,:;='\"`<>()[]{}/\\| ";
+    NSCharacterSet *allowedCharacters = [[NSCharacterSet characterSetWithCharactersInString:charactersToEscape] invertedSet];
+    NSString *upSign = [self stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
+    return upSign;
+}
+
 - (NSString *)md5Encode
 {
     //1.首先将字符串转换成UTF-8编码, 因为MD5加密是基于C语言的,所以要先把字符串转化成C语言的字符串
@@ -59,5 +81,17 @@
         [output appendFormat:@"%02x", digest[i]];
     
     return output;
+}
+
+- (NSString *)base64Encode {
+    NSData *encodeData = [self dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *base64String = [encodeData base64EncodedStringWithOptions:0];
+    return base64String;
+}
+
+- (NSString *)base64Decode {
+    NSData *decodedData = [[NSData alloc] initWithBase64EncodedString:self options:0];
+    NSString *decodedString = [[NSString alloc] initWithData:decodedData encoding:NSUTF8StringEncoding];
+    return decodedString;
 }
 @end

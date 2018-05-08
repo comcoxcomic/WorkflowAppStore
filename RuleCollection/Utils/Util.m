@@ -20,13 +20,6 @@
     return nil;
 }
 
-+ (NSString *)urlEncodeStr:(NSString *)input{
-    NSString *charactersToEscape = @"?!@#$^&%*+,:;='\"`<>()[]{}/\\| ";
-    NSCharacterSet *allowedCharacters = [[NSCharacterSet characterSetWithCharactersInString:charactersToEscape] invertedSet];
-    NSString *upSign = [input stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
-    return upSign;
-}
-
 + (CGSize)sizeWithText:(NSString *)text maxSize:(CGSize)maxSize font:(UIFont *)font {
     NSDictionary *attr = @{ NSFontAttributeName : font };
     return [text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:attr context:nil].size;

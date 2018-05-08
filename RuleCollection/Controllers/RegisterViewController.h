@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface RegisterViewController : UIViewController
-
+@property (nonatomic, copy) void (^Success)(BOOL isSuccess, NSString *userName, NSString *password);
 @end

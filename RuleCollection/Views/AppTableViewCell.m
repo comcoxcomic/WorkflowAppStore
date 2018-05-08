@@ -130,7 +130,7 @@
         Download *download = [Download yy_modelWithJSON:responseObject];
         if (download.code == 0)
         {
-            NSString *urlStr = [NSString stringWithFormat:@"workflow://import-workflow/?url=%@.wflow&name=%@&silent=true",download.AppUrl,[Util urlEncodeStr:self.appFrame.app.AppName]];
+            NSString *urlStr = [NSString stringWithFormat:@"workflow://import-workflow/?url=%@.wflow&name=%@&silent=true",download.AppUrl,[self.appFrame.app.AppName urlEncode]];
             NSURL *url = [NSURL URLWithString:urlStr];
             [[UIApplication sharedApplication]openURL:url];
         }

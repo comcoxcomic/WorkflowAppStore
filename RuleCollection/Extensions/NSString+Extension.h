@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (Extension)
+- (BOOL) isNullOrWhiteSpace;
+
+- (NSString *)urlEncode;
 - (NSString *)md5Encode;
--(NSString*) sha1Encode;
+- (NSString *)sha1Encode;
+- (NSString *)base64Encode;
+- (NSString *)base64Decode;
 @end
